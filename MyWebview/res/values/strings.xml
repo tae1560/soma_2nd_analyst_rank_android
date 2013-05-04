@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- will be shown while sharing the app .. you can have a test -->	
+    <string name="app_name">증권사 RANK</string> 
+    
+    <!-- Options menu home page link  ..THIS MUST BE YOUR WEBVIEW URL AGAIN.. -->	
+    <string name="app_url">http://google.com</string> 
+    
+    <!--  Options menu home text -->	
+    <string name="home">Home</string> 
+    
+    <!--  Options menu about text -->
+    <string name="about">About</string> 
+    
+    <!--  Options menu share url which will be sent to your friends -->
+    <string name="share_url">https://play.google.com</string> 
+    
+    <!--  Options menu refresh text -->
+    <string name="refresh">Refresh</string>
+    
+    <!-- Options menu share text -->
+    <string name="share">Share</string> 
+    
+    <!-- Options menu exit text -->
+    <string name="exit">Exit</string> 
+    
+    <!--  exit confirmation dialog -->
+    <string name="are_you_sure">Do you want to exit?</string> 
+    <string name="ok">OK</string>
+	<string name="yes">Yes</string>
+	<string name="no">No</string>
+	
+	<!--  Change your about dialog text here -->
+	
+	<string name="about_text">증권사들의 랭크를 매겨서 각 증권사의 종목추천에 대한 실력을 평가한후 해당 증권사의 추천종목을 푸쉬알림 해주는 서비스입니다.</string>
+	<string name="dialog_message">Are you sure do you want to exit?</string>
+	<string name="dialog_title">Exit Or Cancel</string>
+	<string name="cancel">Cancel</string>
+</resources>
