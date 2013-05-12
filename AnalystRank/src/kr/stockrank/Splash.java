@@ -1,14 +1,14 @@
-package kr.swmaestro.stock_firm_rank;
+package kr.stockrank;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import kr.swmaestro.stock_firm_rank.gcm.GCMManager;
+import kr.stockrank.gcm.GCMManager;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
+
 
 public class Splash extends Activity {
 

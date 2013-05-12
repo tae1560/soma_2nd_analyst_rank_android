@@ -1,7 +1,7 @@
-package kr.swmaestro.stock_firm_rank;
+package kr.stockrank;
 
-import kr.swmaestro.stock_firm_rank.dialog.Aboutlistener;
-import kr.swmaestro.stock_firm_rank.dialog.Exitlistener;
+import kr.stockrank.dialog.Aboutlistener;
+import kr.stockrank.dialog.Exitlistener;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -10,6 +10,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.view.MenuItem;
 import android.webkit.WebView;
+
 
 public class Mainmenu {
 

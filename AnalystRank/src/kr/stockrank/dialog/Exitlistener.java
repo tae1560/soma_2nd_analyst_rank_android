@@ -1,4 +1,4 @@
-package kr.swmaestro.stock_firm_rank.dialog;
+package kr.stockrank.dialog;
 
 import android.app.Activity;
 import android.content.DialogInterface;

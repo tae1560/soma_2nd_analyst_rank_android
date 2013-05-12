@@ -1,4 +1,4 @@
-package kr.swmaestro.stock_firm_rank;
+package kr.stockrank;
 
 import java.util.ArrayList;
 import java.util.List;

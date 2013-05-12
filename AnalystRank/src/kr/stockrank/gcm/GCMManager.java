@@ -1,9 +1,11 @@
-package kr.swmaestro.stock_firm_rank.gcm;
+package kr.stockrank.gcm;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import kr.swmaestro.stock_firm_rank.CommonUtils;
+import kr.stockrank.CommonUtils;
+
+
 import android.content.Context;
 import android.util.Log;
 

@@ -1,7 +1,7 @@
-package kr.swmaestro.stock_firm_rank;
+package kr.stockrank;
 
-import kr.swmaestro.stock_firm_rank.dialog.AlertDialogActivity;
-import kr.swmaestro.stock_firm_rank.gcm.GCMManager;
+import kr.stockrank.dialog.AlertDialogActivity;
+import kr.stockrank.gcm.GCMManager;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;

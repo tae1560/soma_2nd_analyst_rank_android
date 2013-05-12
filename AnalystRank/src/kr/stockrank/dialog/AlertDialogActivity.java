@@ -1,8 +1,7 @@
-package kr.swmaestro.stock_firm_rank.dialog;
+package kr.stockrank.dialog;
 
-import kr.swmaestro.stock_firm_rank.CommonUtils;
-import kr.swmaestro.stock_firm_rank.R;
-import kr.swmaestro.stock_firm_rank.gcm.GCMManager;
+import kr.stockrank.CommonUtils;
+import kr.stockrank.R;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -11,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
+
 
 public class AlertDialogActivity extends Activity {
 

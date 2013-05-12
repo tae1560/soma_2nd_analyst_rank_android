@@ -1,6 +1,6 @@
-package kr.swmaestro.stock_firm_rank;
+package kr.stockrank;
 
-import kr.swmaestro.stock_firm_rank.gcm.GCMManager;
+import kr.stockrank.gcm.GCMManager;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -18,12 +18,13 @@ import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+
 public class Webview extends Activity {
 	
 
     WebView mWebView;
   
-  String URL="http://soma2.vps.phps.kr";
+  String URL="http://soma2.vps.phps.kr/";
 
   ProgressBar loadingProgressBar,loadingTitle;
   

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<!-- will be shown while sharing the app .. you can have a test -->	
-    <string name="app_name">증권사 RANK</string> 
+    <string name="app_name">증권사 추천왕</string> 
     
     <!-- Options menu home page link  ..THIS MUST BE YOUR WEBVIEW URL AGAIN.. -->	
     <string name="app_url">http://google.com</string> 
