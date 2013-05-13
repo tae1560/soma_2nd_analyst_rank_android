@@ -8,7 +8,7 @@
     android:gravity="fill"
     tools:context=".Webview" >
 
-    <com.google.ads.AdView
+    <!-- <com.google.ads.AdView
         android:id="@+id/ad"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -16,7 +16,7 @@
         ads:adSize="BANNER"
         ads:adUnitId="ss58saet699cc3c25"
         ads:loadAdOnCreate="true" />
-
+ -->
     <ProgressBar
         android:id="@+id/progressbar_Horizontal"
         style="?android:attr/progressBarStyleHorizontal"
@@ -29,7 +29,7 @@
         android:id="@+id/webview"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@+id/ad"
+        android:layout_below="@+id/progressbar_Horizontal"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

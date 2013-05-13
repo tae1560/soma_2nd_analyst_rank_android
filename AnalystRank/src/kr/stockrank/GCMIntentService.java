@@ -1,14 +1,13 @@
 package kr.stockrank;
 
-import kr.stockrank.dialog.AlertDialogActivity;
 import kr.stockrank.gcm.GCMManager;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.app.PendingIntent.CanceledException;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
+import android.net.Uri;
+import android.os.Vibrator;
 import android.util.Log;
 
 import com.google.android.gcm.GCMBaseIntentService;
@@ -26,6 +25,7 @@ public class GCMIntentService extends GCMBaseIntentService {
 		// TODO Auto-generated method stub
 		//Log.d("test","message:"+message);
 		Log.e(GCMManager.TAG,"message:"+intent.toString());
+//		CommonUtils.debug("onMessage");
 		
 		String message = intent.getStringExtra("message_text");
 		String title = intent.getStringExtra("title_text");
@@ -36,36 +36,36 @@ public class GCMIntentService extends GCMBaseIntentService {
 		
 		//int notification_id = intent.getIntExtra("notification_id", -1);
 		
-		Bundle bun = new Bundle();
-		bun.putString("notiMessage", message); 
-		bun.putString("notiTitle", title);
-		bun.putInt("notification_id", notification_id);
-
-		Intent popupIntent = new Intent(getApplicationContext(), AlertDialogActivity.class);
-
-		popupIntent.putExtras(bun);
-		PendingIntent pie= PendingIntent.getActivity(getApplicationContext(), 0, popupIntent, PendingIntent.FLAG_ONE_SHOT);
-		try {
-		 pie.send();
-		} catch (CanceledException e) {
-//		 Log  Util.degug(e.getMessage());
-		}
+//		Bundle bun = new Bundle();
+//		bun.putString("notiMessage", message); 
+//		bun.putString("notiTitle", title);
+//		bun.putInt("notification_id", notification_id);
+//
+//		Intent popupIntent = new Intent(getApplicationContext(), AlertDialogActivity.class);
+//
+//		popupIntent.putExtras(bun);
+//		PendingIntent pie= PendingIntent.getActivity(getApplicationContext(), 0, popupIntent, PendingIntent.FLAG_ONE_SHOT);
+//		try {
+//		 pie.send();
+//		} catch (CanceledException e) {
+////		 Log  Util.degug(e.getMessage());
+//		}
 	        
 //		    context.finish(); 
 //		
-//		try {
-//			//String title = intent.getStringExtra(PUSH_DATA_TITLE);
+		try {
+			//String title = intent.getStringExtra(PUSH_DATA_TITLE);
 //			String message = intent.getStringExtra("message_text");
-//			Vibrator vibrator = 
-//			 (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-//			vibrator.vibrate(1000);
-//			setNotification(context, "증권사 RANK", message);
-//		} catch (Exception e) {
-//			Log.e(GCMManager.TAG, "[onMessage] Exception : " + e.getMessage());
-//		}
+			Vibrator vibrator = 
+			 (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+			vibrator.vibrate(1000);
+			setNotification(context, title, message, notification_id);
+		} catch (Exception e) {
+			Log.e(GCMManager.TAG, "[onMessage] Exception : " + e.getMessage());
+		}
 	}
 	
-	private void setNotification(Context context, String title, String message) {
+	private void setNotification(Context context, String title, String message, int notification_id) {
 		NotificationManager notificationManager = null;
 		Notification notification = null;
 		try {
@@ -74,9 +74,22 @@ public class GCMIntentService extends GCMBaseIntentService {
 			notification = new Notification(R.drawable.ic_launcher,
 					message, System.currentTimeMillis());
 			Intent intent = new Intent(context, Splash.class);
+			intent.putExtra("notification_id", notification_id);
+			intent.putExtra("webview_url", "http://www.stockrank.kr/recommendations");
 			PendingIntent pi = PendingIntent.getActivity(context, 0, intent, 0);
+			
+			notification.vibrate = new long[] { 500, 100, 500, 100 };
+			notification.sound = Uri.parse("/system/media/audio/notifications/20_Cloud.ogg");
+			notification.flags = Notification.FLAG_AUTO_CANCEL;
+			
 			notification.setLatestEventInfo(context, title, message, pi);
 			notificationManager.notify(0, notification);
+			
+
+
+//			Intent intent = new Intent();
+//	    	  intent.setClassName(getPackageName(), getPackageName()+".Splash");
+//	    	  intent.putExtra("notification_id", notification_id);
 		} catch (Exception e) {
 			Log.e(GCMManager.TAG, "[setNotification] Exception : " + e.getMessage());
 		}

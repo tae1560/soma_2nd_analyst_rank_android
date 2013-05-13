@@ -24,7 +24,7 @@ public class Webview extends Activity {
 
     WebView mWebView;
   
-  String URL="http://soma2.vps.phps.kr/";
+  String URL="http://www.stockrank.kr/";
 
   ProgressBar loadingProgressBar,loadingTitle;
   
@@ -33,6 +33,12 @@ public class Webview extends Activity {
    Ratethisapp.app_launched(this);
    super.onCreate(savedInstanceState);
    setContentView(R.layout.webview);
+   
+   Intent intent = getIntent();
+   String webview_url = intent.getStringExtra("webview_url");
+
+   if(webview_url!=null)URL = webview_url;
+   
    mWebView = (WebView) findViewById(R.id.webview);
    mWebView.setHorizontalScrollBarEnabled(true); 
    mWebView.getSettings().setLoadsImagesAutomatically(true);
@@ -41,8 +47,8 @@ public class Webview extends Activity {
    mWebView.getSettings().setJavaScriptEnabled(true);
    setProgressBarVisibility(true);
    mWebView.getSettings().setPluginsEnabled(true);
-   mWebView.getSettings().setSupportZoom(true);
-   mWebView.getSettings().setBuiltInZoomControls(true);
+   mWebView.getSettings().setSupportZoom(false);
+   mWebView.getSettings().setBuiltInZoomControls(false);
    mWebView.getSettings().setUseWideViewPort(true);
    mWebView.setInitialScale(1);
    

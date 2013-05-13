@@ -23,7 +23,8 @@ public class Splash extends Activity {
 		setContentView(R.layout.splash);
 		
 		Intent intent = getIntent();
-		int notification_id = intent.getIntExtra("notification_id", -1);
+		final int notification_id = intent.getIntExtra("notification_id", -1);
+		final String webview_url = intent.getStringExtra("webview_url");
 		
 		CommonUtils.debug("notification_id : " + notification_id);
 		
@@ -45,6 +46,9 @@ public class Splash extends Activity {
 			public void run() {
 				Intent i = new Intent(Splash.this,
 						Webview.class);
+				
+				i.putExtra("notification_id", notification_id);
+				i.putExtra("webview_url", webview_url);
 				startActivity(i);
 				finish();
 				if (overrideAnimation != null) {

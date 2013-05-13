@@ -23,6 +23,8 @@ public class GCMManager {
 		// setup gcm
 		GCMRegistrar.checkDevice(context);
 		GCMRegistrar.checkManifest(context);
+//		GCMRegistrar.unregister(context);
+		
 		regId = GCMRegistrar.getRegistrationId(context);
 		
 		TAG = context.getPackageName();
