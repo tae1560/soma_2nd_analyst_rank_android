@@ -13,7 +13,7 @@
     <string name="about">About</string> 
     
     <!--  Options menu share url which will be sent to your friends -->
-    <string name="share_url">https://play.google.com</string> 
+    <string name="share_url">http://www.stockrank.kr</string> 
     
     <!--  Options menu refresh text -->
     <string name="refresh">Refresh</string>
