@@ -4,7 +4,7 @@
     <string name="app_name">증권사 추천왕</string> 
     
     <!-- Options menu home page link  ..THIS MUST BE YOUR WEBVIEW URL AGAIN.. -->	
-    <string name="app_url">http://google.com</string> 
+    <string name="app_url">http://www.stockrank.kr</string> 
     
     <!--  Options menu home text -->	
     <string name="home">Home</string> 
@@ -32,7 +32,7 @@
 	
 	<!--  Change your about dialog text here -->
 	
-	<string name="about_text">증권사들의 랭크를 매겨서 각 증권사의 종목추천에 대한 실력을 평가한후 해당 증권사의 추천종목을 푸쉬알림 해주는 서비스입니다.</string>
+	<string name="about_text">증권사들의 순위를 보여주고,  각 증권사의 종목추천에 대한 실력을 평가한후 해당 증권사의 추천종목을 푸쉬알림 해주는 서비스입니다.</string>
 	<string name="dialog_message">Are you sure do you want to exit?</string>
 	<string name="dialog_title">Exit Or Cancel</string>
 	<string name="cancel">Cancel</string>
