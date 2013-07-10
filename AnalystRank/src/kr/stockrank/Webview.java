@@ -173,12 +173,12 @@ public class Webview extends Activity {
 			mWebView.goBack();
 			return true;
 		}
-		else
+		else if(keyCode == KeyEvent.KEYCODE_BACK)
 		{
 			displayExitPopUP();
 			return false;
 		}
-		//return super.onKeyDown(keyCode, event);
+		return super.onKeyDown(keyCode, event);
 	}
 
 	//Display on exit dialog
